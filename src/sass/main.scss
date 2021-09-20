@@ -1,0 +1,78 @@
+$textColor: #131817;
+$succesColor: #6dd47e;
+$todoColor: #FFD55A;
+
+
+
+body {
+    font-size: 1.3rem;
+    color: $textColor;
+    overflow: auto;
+    background: linear-gradient(to right, rgb(201, 214, 255), rgb(226, 226, 226));
+
+}
+
+
+.container {
+    max-width: 600px;
+    text-align: center;
+    margin-top: 75px;
+
+}
+
+h1 {
+    letter-spacing: 6.5px;
+    font-weight: bold;
+
+}
+
+button {
+    min-width: 175px;
+    margin-top: 8px;
+    margin-left: 5px;
+
+}
+
+.button {
+
+
+    &--add {
+
+        background-color: $todoColor;
+        font-weight: bold;
+    }
+
+    &--clear {
+        background-color: $succesColor;
+        font-weight: bold;
+    }
+}
+
+.task {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    i {
+        cursor: pointer;
+        padding: 5px
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &_complete {
+        border-color: $succesColor;
+        background-color: $succesColor;
+
+    }
+
+
+    &_incomplete {
+        border-color: $todoColor;
+        background-color: $todoColor;
+
+    }
+}
